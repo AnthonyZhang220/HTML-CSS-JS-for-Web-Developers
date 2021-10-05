@@ -19,23 +19,20 @@ header h1{
 
 section{
     position: relative;
-    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+
 }
+
 
 div#container {
     background-color: grey;
-    /* padding: 5px; */
     margin: 20px;
-    /* display: grid; */
-    width: 400px;
-    position:relative;
-    display: inline-block;
     border: 3px solid black;
 }
 div > div {
     display: flex;
     justify-content: flex-end;
-    /* top:0; */
 }
 
 div > div > h2{
@@ -48,24 +45,37 @@ div > div > h2{
 
 .chicken h2 {
     background-color: #d59898;
-    text-align:right;
-    top: 0;
-    right: 0;
 }
 .beef h2{
     background-color:#c14543;
     color: #ffffff;
-    text-align:right;
-    top: 0;
-    right: 0;
 }
 .sushi h2{
     background-color: #e5d198;
-    text-align:right;
-    top: 0;
-    right: 0;
-    
 }
+
 p{
     padding:10px;
+}
+
+@media (min-width: 992px) {
+    section{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 991px ) and (min-width: 768px) {
+
+    section{ 
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media (max-width: 767px ){
+
+    section{
+        flex-direction: column;
+    }
+    
 }
